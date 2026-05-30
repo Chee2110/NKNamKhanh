@@ -1,4 +1,4 @@
-const pathname = window.location.pathname;
+﻿const pathname = window.location.pathname;
 
 document.addEventListener("DOMContentLoaded", () => {
   setActiveNavigation();
@@ -286,56 +286,56 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "VĂN PHÒNG PHẨM",
       title: "Giấy<br/><span>các loại</span>",
       desc: "Cung cấp đa dạng các dòng giấy chất lượng cao, đáp ứng nhu cầu in ấn, photocopy, ghi chép và sử dụng hằng ngày. Sản phẩm có bề mặt mịn, độ trắng đẹp, định lượng chuẩn, mang lại hiệu quả tối ưu cho công việc văn phòng và học tập.",
-      img: "assets/images/Giấy IK Plus A4 Indonesia ĐL70.png",
+      img: "/assets/images/Giấy IK Plus A4 Indonesia ĐL70.png",
       thumbTitle: "Giấy in",
     },
     {
       category: "BÚT VIẾT",
       title: "Bút<br/><span>các loại</span>",
       desc: "Danh mục bút đa dạng từ bút bi, bút ký, bút lông đến bút chuyên dụng, phù hợp cho mọi nhu cầu viết và trình bày. Thiết kế tiện dụng, nét mực đều, êm tay, góp phần nâng cao trải nghiệm làm việc chuyên nghiệp và tinh tế.",
-      img: "assets/images/Bút bi TL023.jpg",
+      img: "/assets/images/Bút bi TL023.jpg",
       thumbTitle: "Bút viết",
     },
     {
       category: "LƯU TRỮ",
       title: "File<br/><span>hồ sơ</span>",
       desc: "Các sản phẩm file hồ sơ được lựa chọn kỹ lưỡng nhằm hỗ trợ lưu trữ tài liệu khoa học, gọn gàng và thẩm mỹ. Kiểu dáng đa dạng, chất liệu bền đẹp, giúp doanh nghiệp quản lý hồ sơ hiệu quả và chuyên nghiệp hơn.",
-      img: "assets/images/File còng Kokuyo khổ A 9cm.jpg",
+      img: "/assets/images/File còng Kokuyo khổ A 9cm.jpg",
       thumbTitle: "File hồ sơ",
     },
     {
       category: "KEO DÁN",
       title: "Băng dính<br/><span>tiện dụng</span>",
       desc: "Băng dính chất lượng tốt với độ bám chắc, sử dụng linh hoạt trong đóng gói, cố định và các nhu cầu văn phòng thông dụng. Sản phẩm bảo đảm tính tiện lợi, độ bền cao và đáp ứng tốt trong nhiều môi trường sử dụng khác nhau.",
-      img: "assets/images/Băng dính(1).jpg",
+      img: "/assets/images/Băng dính(1).jpg",
       thumbTitle: "Băng dính",
     },
     {
       category: "ĐÓNG GÓI",
       title: "Màng PE<br/><span>an toàn</span>",
       desc: "Màng PE được thiết kế với độ co giãn và bám dính tốt, hỗ trợ đóng gói hàng hóa an toàn, gọn gàng và thẩm mỹ. Đây là giải pháp tối ưu giúp bảo vệ sản phẩm hiệu quả trong quá trình lưu trữ và vận chuyển.",
-      img: "assets/images/Màng chít.jpg",
+      img: "/assets/images/Màng chít.jpg",
       thumbTitle: "Màng PE",
     },
     {
       category: "VĂN PHÒNG",
       title: "Dập ghim<br/><span>& Đục lỗ</span>",
       desc: "Các sản phẩm dập ghim và đục lỗ mang đến sự tiện lợi, chắc chắn và chính xác trong quá trình sắp xếp tài liệu. Thiết kế bền bỉ, thao tác nhẹ nhàng, phù hợp với nhu cầu sử dụng thường xuyên tại văn phòng, trường học và cơ quan.",
-      img: "assets/images/Dập ghim số 10, D238.webp",
+      img: "/assets/images/Dập ghim số 10, D238.webp",
       thumbTitle: "Dập ghim",
     },
     {
       category: "PHỤ KIỆN",
       title: "Phụ kiện<br/><span>khác</span>",
       desc: "Danh mục phụ kiện văn phòng đa dạng, hỗ trợ hoàn thiện không gian làm việc đầy đủ, ngăn nắp và hiệu quả. Mỗi sản phẩm đều được chọn lọc nhằm đáp ứng tốt cả về công năng, độ bền và tính thẩm mỹ.",
-      img: "assets/images/File 3 ngăn Deli 9843.jpg",
+      img: "/assets/images/File 3 ngăn Deli 9843.jpg",
       thumbTitle: "Phụ kiện",
     },
     {
       category: "TRANG TRÍ",
       title: "Đồ<br/><span>trang trí</span>",
       desc: "Đồ trang trí không chỉ làm đẹp không gian mà còn góp phần tạo nên môi trường làm việc hiện đại, tinh tế và truyền cảm hứng. Sản phẩm phù hợp để nâng tầm hình ảnh văn phòng, cửa hàng hoặc khu vực trưng bày một cách chuyên nghiệp.",
-      img: "assets/images/Đồng hồ trống đồng 2.jpg",
+      img: "/assets/images/Đồng hồ trống đồng 2.jpg",
       thumbTitle: "Đồ trang trí",
     },
   ];
@@ -458,7 +458,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }).format(prod.price);
 
     // Fallback if image doesn't exist just in case
-    const imgUrl = prod.image || "assets/images/logo-nam-khánh.png";
+    const imgUrl = prod.image || "/assets/images/logo-nam-khánh.png";
 
     html += `
       <a href="/product-detail/?id=${prod.id}" class="fc-card">
@@ -542,17 +542,17 @@ function initDecorCarousel() {
   const data = [
     {
       name: "Bản đồ tráng gương 34 tỉnh thành",
-      video: "Video/video bản đồ màu xanh.mp4",
+      video: "/Video/video bản đồ màu xanh.mp4",
     },
     {
       name: "Bản đồ gỗ vàng 34 tỉnh thành",
-      video: "Video/video bản đồ vàng.mp4",
+      video: "/Video/video bản đồ vàng.mp4",
     },
-    { name: "Đồng hồ bản đồ", video: "Video/video đồng hồ màu xanh.mp4" },
-    { name: "Đồng hồ trống đồng", video: "Video/video đồng hồ trống đồng.mp4" },
+    { name: "Đồng hồ bản đồ", video: "/Video/video đồng hồ màu xanh.mp4" },
+    { name: "Đồng hồ trống đồng", video: "/Video/video đồng hồ trống đồng.mp4" },
     {
       name: "Đồng hồ decor cao cấp",
-      video: "assets/images/Đồng hồ decor video.mp4",
+      video: "/assets/images/Đồng hồ decor video.mp4",
     },
   ];
 
