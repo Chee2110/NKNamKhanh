@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
       <div id="popupZalo" style="display:none; text-align: center; padding: 40px 20px 30px;">
         <div style="background: #fff; padding: 2px; border-radius: 14px; box-shadow: 0 8px 30px rgba(0, 104, 255, 0.2); display: inline-block; border: 1px solid #e8edf5;">
-          <img src="QR Zalo.jpg" alt="Zalo QR" style="max-width: 320px; width: 100%; display: block; border-radius: 12px;">
+          <img src="/QR Zalo.jpg" alt="Zalo QR" style="max-width: 320px; width: 100%; display: block; border-radius: 12px;">
         </div>
       </div>
 
