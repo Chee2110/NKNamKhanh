@@ -58,7 +58,7 @@ function createProductCardHTML(product) {
       <h3>${product.name}</h3>
       <p>${product.shortDescription || product.description || ""}</p>
       <div class="product-actions">
-        <a class="link-btn" href="product-detail.html?id=${product.id}">Xem chi tiết →</a>
+        <a class="link-btn" href="/product-detail/?id=${product.id}">Xem chi tiết →</a>
       </div>
     `;
   return article;

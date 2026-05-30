@@ -1,4 +1,4 @@
-const currentPage = window.location.pathname.split("/").pop() || "index.html";
+const pathname = window.location.pathname;
 
 document.addEventListener("DOMContentLoaded", () => {
   setActiveNavigation();
@@ -50,11 +50,9 @@ function setActiveNavigation() {
   links.forEach((link) => {
     const target = link.getAttribute("href");
     if (
-      target === currentPage ||
-      (currentPage === "" && target === "index.html") ||
-      ((currentPage === "product-detail.html" ||
-        currentPage.startsWith("product-")) &&
-        target === "products.html")
+      (target === "/" && pathname === "/") ||
+      (target !== "/" && pathname.startsWith(target)) ||
+      (pathname.startsWith("/product-detail") && target === "/products/")
     ) {
       link.classList.add("active");
     }
@@ -112,7 +110,7 @@ function productCardHTML(product) {
       <h3>${product.name}</h3>
       <p>${product.description || product.name}</p>
       <div class="product-actions">
-        <a class="link-btn" href="product-detail.html?id=${product.id}">Xem chi tiết →</a>
+        <a class="link-btn" href="/product-detail/?id=${product.id}">Xem chi tiết →</a>
       </div>
     </article>
   `;
@@ -463,7 +461,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const imgUrl = prod.image || "assets/images/logo-nam-khánh.png";
 
     html += `
-      <a href="product-detail.html?id=${prod.id}" class="fc-card">
+      <a href="/product-detail/?id=${prod.id}" class="fc-card">
         <div class="fc-card-img-wrap">
           <img src="${imgUrl}" alt="${prod.name}" loading="lazy">
         </div>
