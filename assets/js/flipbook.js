@@ -6,7 +6,7 @@
 (function () {
   "use strict";
 
-  const PDF_URL = "assets/catalogue.pdf";
+  const PDF_URL = "/assets/catalogue.pdf";
   const CONTAINER_ID = "flipbook-container";
   const SCALE = 1.8; // Render scale – higher = clearer image
 
@@ -88,7 +88,7 @@
       buildControls(container, totalPages);
     } catch (err) {
       container.innerHTML =
-        '<div class="fb-error"><p>⚠️ Không thể tải catalogue. <a href="assets/catalogue.pdf" target="_blank">Tải về xem ↗</a></p></div>';
+        '<div class="fb-error"><p>⚠️ Không thể tải catalogue. <a href="/assets/catalogue.pdf" target="_blank">Tải về xem ↗</a></p></div>';
       console.error("Flipbook error:", err);
     }
   }
